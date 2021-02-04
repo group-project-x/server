@@ -2,6 +2,13 @@ const express = require("express")
 const app = express()
 const port = 3000
 
+
+app.post("/register", (req, res) => {
+  const { email, password } = req.body
+
+  res.status(201).json({ email })
+}) 
+ 
 app.post("/login", (req, res) => {
   const { email, password } = req.body
   const access_token
